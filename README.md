@@ -34,11 +34,11 @@ Please (do your best to) stick to [Google's C++ style guide](https://google.gith
 ---
 ## PID Controller
 The PID controller is a closed loop feedback controller that calculates the output of the controller based on the difference between the current state of the feedback and the desired state. The actual implementation of the controller is straightforward. Tuning the parameters for the controller is the time consuming part. Understanding what each component of the PID controller does is important for tuning the parameters. 
- - Proportional Control - The proportional controller will stear the vehicle in proportion to the cross-track error (CTE). The CTE is the distance the vehicle is from the middle of the road. As the vehicle drifts from the right side of the road the controller will pull the vehicle left towards the middle of the road. As the vehicle drifts from the left side of the road the controller will pull the vehicle right towards the middle of the road. 
- - Integral Control - The integral controller will sum up the error or CTE and turn the vehicle toward the middle of the road. The integral term will help increase the time the controller will take to reach a desired state, but will not help with the overshoot that will build up as a result of implimentation. 
- - Derivitive Control - The derivitive controller is the change in the error or CTE from one time step to the next. Using the derivitive controller will decrease the amount of overshoot in error correction. 
+ - Proportional Control - The proportional controller will steer the vehicle in proportion to the cross-track error (CTE). The CTE is the distance the vehicle is from the middle of the road. As the vehicle drifts from the right side of the road the controller will pull the vehicle left towards the middle of the road. As the vehicle drifts from the left side of the road the controller will pull the vehicle right towards the middle of the road. 
+ - Integral Control - The integral controller will sum up the error or CTE and turn the vehicle toward the middle of the road. The integral term will help increase the time the controller will take to reach a desired state, but will not help with the overshoot that will build up as a result of implementation. 
+ - Derivative Control - The derivative controller is the change in the error or CTE from one time step to the next. Using the derivative controller will decrease the amount of overshoot in error correction. 
  
-As an experiment I implemented each controller by themselves. The vehicle was not able to drive around the track until I implemented a full PID controller. I tuned the parameters by hand. The vehicle makes it around the track without going over the edges, but oscillates back and forth as the PID controller tries to correct for CTE. Please see the project video of my vehilcle going around the track [here](https://youtu.be/vbkYn6jW1gM). 
+As an experiment I implemented each controller by themselves. The vehicle was not able to drive around the track until I implemented a full PID controller. I tuned the parameters by hand. The vehicle makes it around the track without going over the edges, but oscillates back and forth as the PID controller tries to correct for CTE. Please see the project video of my vehicle going around the track [here](https://youtu.be/vbkYn6jW1gM). 
 
 #### Below are some notes I took as I changed parameters and ran different experiments: 
  - P Only:
@@ -55,9 +55,9 @@ As an experiment I implemented each controller by themselves. The vehicle was no
     * Ki = 0.5     
       > Turns max angle and gets stuck there
     * Ki = 0.05    
-      > Turns max angle left and trys max angle right
+      > Turns max angle left and attempts max angle right
     * Ki = 0.005   
-      > Turns max angle left and trys max angle right
+      > Turns max angle left and attempts max angle right
 
  - D Only:
     * Kd = 1.0     
