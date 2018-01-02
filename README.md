@@ -44,29 +44,29 @@ Below are some notes I took as I changed parameters and ran different experiment
  - P Only:
     * Kp = 1.0     Oscillate wildly after a few seconds
     * Kp = 0.5     Oscillate wildly after 5 seconds
-    -Kp = 0.1     Oscillate wildly at first turn
-    -Kp = 0.05    Oscillate wildly after first turn
+    * Kp = 0.1     Oscillate wildly at first turn
+    * Kp = 0.05    Oscillate wildly after first turn
 
  - I Only:
-    -Ki = 0.5     Turns max angle and gets stuck there
-    -Ki = 0.05    Turns max angle left and trys max angle right
-    -Ki = 0.005   Turns max angle left and trys max angle right
+    * Ki = 0.5     Turns max angle and gets stuck there
+    * Ki = 0.05    Turns max angle left and trys max angle right
+    * Ki = 0.005   Turns max angle left and trys max angle right
 
  - D Only:
-    -Kd = 1.0     Doesn't turn enough
-    -Kd = 2.0     Better but still doesn't turn enough at the turns
+    * Kd = 1.0     Doesn't turn enough
+    * Kd = 2.0     Better but still doesn't turn enough at the turns
 
  - PD:
-    -Kp = 0.05, Kd = 1.0
-      Gets around the whole track with minor edge touching
-    -Kp = 0.05, Kd = 1.5
-      Better but still close to the edge during turns
-    -Kp = 0.05, Kd = 2.5
-      Better but still close to the edge during turns
+    * Kp = 0.05, Kd = 1.0
+      > *Gets around the whole track with minor edge touching
+    * Kp = 0.05, Kd = 1.5
+      > *Better but still close to the edge during turns
+    * Kp = 0.05, Kd = 2.5
+      > *Better but still close to the edge during turns
 
  - PID:
-    -Kp = 0.05, Ki = 0.005, Kd = 3.0
+    * Kp = 0.05, Ki = 0.005, Kd = 3.0
       Gets around the whole track, but oscillates while driving
-    -Kp = 0.15, Ki = 0.005, Kd = 3.0
+    * Kp = 0.15, Ki = 0.005, Kd = 3.0
       Gets around the whole track, but oscillates while driving
 
