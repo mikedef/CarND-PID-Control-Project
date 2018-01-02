@@ -30,3 +30,8 @@ Please (do your best to) stick to [Google's C++ style guide](https://google.gith
  - Implement a PID controller for steering
  - Optimize ini parameters for each PID coefficient
  - No tire may leave the drivable portion of the track surface. The car may not pop up onto ledges or roll over any surfaces that would otherwise be considered unsafe (if humans were in the vehicle).
+
+---
+## PID Controller
+The PID controller is a closed loop feedback controller that calculates the output of the controller based on the difference between the current state of the feedback and the desired state. The actual implementation of the controller is straightforward. Tuning the parameters for the controller is the time consuming part. Understanding what each component of the PID controller does is important for tuning the parameters. 
+ - Proportional control - 
