@@ -40,21 +40,30 @@ The PID controller is a closed loop feedback controller that calculates the outp
  
 As an experiment I implemented each controller by themselves. The vehicle was not able to drive around the track until I implemented a full PID controller. I tuned the parameters by hand. The vehicle makes it around the track without going over the edges, but oscillates back and forth as the PID controller tries to correct for CTE. Please see the project video of my vehilcle going around the track [here](https://youtu.be/vbkYn6jW1gM). 
 
-Below are some notes I took as I changed parameters and ran different experiments. 
+#### Below are some notes I took as I changed parameters and ran different experiments: 
  - P Only:
-    * Kp = 1.0     > Oscillate wildly after a few seconds
-    * Kp = 0.5     > Oscillate wildly after 5 seconds
-    * Kp = 0.1     > Oscillate wildly at first turn
-    * Kp = 0.05    > Oscillate wildly after first turn
+    * Kp = 1.0     
+      > Oscillate wildly after a few seconds
+    * Kp = 0.5     
+      > Oscillate wildly after 5 seconds
+    * Kp = 0.1     
+      > Oscillate wildly at first turn
+    * Kp = 0.05    
+      > Oscillate wildly after first turn
 
  - I Only:
-    * Ki = 0.5     > Turns max angle and gets stuck there
-    * Ki = 0.05    > Turns max angle left and trys max angle right
-    * Ki = 0.005   > Turns max angle left and trys max angle right
+    * Ki = 0.5     
+      > Turns max angle and gets stuck there
+    * Ki = 0.05    
+      > Turns max angle left and trys max angle right
+    * Ki = 0.005   
+      > Turns max angle left and trys max angle right
 
  - D Only:
-    * Kd = 1.0     > Doesn't turn enough
-    * Kd = 2.0     > Better but still doesn't turn enough at the turns
+    * Kd = 1.0     
+      > Doesn't turn enough
+    * Kd = 2.0     
+      > Better but still doesn't turn enough at the turns
 
  - PD:
     * Kp = 0.05, Kd = 1.0
