@@ -42,8 +42,8 @@ As an experiment I implemented each controller by themselves. The vehicle was no
 
 Below are some notes I took as I changed parameters and ran different experiments. 
  - P Only:
-    -Kp = 1.0     Oscillate wildly after a few seconds
-    -Kp = 0.5     Oscillate wildly after 5 seconds
+    --Kp = 1.0     Oscillate wildly after a few seconds
+    --Kp = 0.5     Oscillate wildly after 5 seconds
     -Kp = 0.1     Oscillate wildly at first turn
     -Kp = 0.05    Oscillate wildly after first turn
 
